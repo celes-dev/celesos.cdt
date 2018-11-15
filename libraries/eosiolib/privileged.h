@@ -99,6 +99,11 @@ extern "C" {
     */
    void activate_feature( int64_t f );
 
+   int64_t ram_attenuation(capi_name name);
+
+   uint64_t get_need_attenuation_account();
+
+
    ///@ } privilegedcapi
 #ifdef __cplusplus
 }
