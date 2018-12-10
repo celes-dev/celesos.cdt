@@ -103,6 +103,27 @@ extern "C" {
 
    uint64_t get_need_attenuation_account();
 
+    /*
+    * set the difficulty value of pow
+    */
+    bool set_difficulty(double difficulty);
+
+    bool verify_wood(uint32_t block_number, capi_name account, const char* wood);
+
+    uint32_t get_chain_head_num();
+
+    uint32_t forest_period_number();
+    uint32_t forest_space_number();
+
+    bool cregdappowner(const capi_name adppowner_name);
+
+    void cunregdappowner(const capi_name adppowner_name);
+
+    int64_t unpaid_resouresweight(const capi_name adppowner_name);
+
+    int64_t total_unpaid_resouresweight();
+
+    void setclaimed(const capi_name n);
 
    ///@ } privilegedcapi
 #ifdef __cplusplus
