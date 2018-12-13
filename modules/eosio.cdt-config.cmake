@@ -1,5 +1,5 @@
 if(EOSIO_CDT_ROOT STREQUAL "" OR NOT EOSIO_CDT_ROOT)
-   set(EOSIO_CDT_ROOT "@CDT_ROOT_DIR@")
+   set(EOSIO_CDT_ROOT "/usr/local/eosio.cdt")
 endif()
 list(APPEND CMAKE_MODULE_PATH ${EOSIO_CDT_ROOT}/lib/cmake/eosio.cdt)
 include(EosioWasmToolchain)
