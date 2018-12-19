@@ -1,0 +1,2 @@
+/Users/dickyang/Desktop/Data/celesos.cdt/bin/eosio-ar qc libeosio.a  CMakeFiles/eosio.dir/eosiolib.cpp.o CMakeFiles/eosio.dir/crypto.cpp.o
+/Users/dickyang/Desktop/Data/celesos.cdt/bin/eosio-ranlib libeosio.a
