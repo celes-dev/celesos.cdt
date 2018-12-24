@@ -122,6 +122,8 @@ extern "C" {
 
     void setclaimed(const capi_name n);
 
+    bool is_systemaccount_transaction( const char* trx_data,     uint32_t trx_size);
+
    ///@ } privilegedcapi
 #ifdef __cplusplus
 }

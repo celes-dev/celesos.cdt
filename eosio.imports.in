@@ -65,6 +65,7 @@ cunregdbp
 unpaid_resouresweight
 total_unpaid_resouresweight
 setclaimed
+is_systemaccount_transaction
 db_idx64_store
 db_idx64_remove
 db_idx64_update
