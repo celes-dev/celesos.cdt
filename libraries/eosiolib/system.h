@@ -86,6 +86,13 @@ extern "C" {
    inline uint32_t  now() {
       return (uint32_t)( current_time() / 1000000 );
    }
+
+   /**
+    *  Returns the random in the number of the block
+    *  @brief Get block random from number of the block
+    *  @return Returns the random in the number of the block
+    */
+   uint64_t block_random_by_num(uint32_t num);
    ///@ } systemcapi
 
 

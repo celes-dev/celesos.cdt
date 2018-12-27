@@ -60,6 +60,7 @@ verify_wood
 get_chain_head_num
 forest_period_number
 forest_space_number
+block_random_by_num
 cregdbp
 cunregdbp
 unpaid_resouresweight
