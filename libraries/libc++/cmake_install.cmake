@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/usr/local/eosio.cdt")
+  set(CMAKE_INSTALL_PREFIX "/usr/local/celesos.cdt")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,29 +34,29 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/usr/local/eosio.cdt/lib/libc++.a")
+   "/usr/local/celesos.cdt/lib/libc++.a")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local/eosio.cdt/lib" TYPE STATIC_LIBRARY FILES "/Users/dickyang/Desktop/Data/celesos.cdt/libraries/libc++/libc++.a")
-  if(EXISTS "$ENV{DESTDIR}/usr/local/eosio.cdt/lib/libc++.a" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/eosio.cdt/lib/libc++.a")
-    execute_process(COMMAND "/Users/dickyang/Desktop/Data/celesos.cdt/bin/eosio-ranlib" "$ENV{DESTDIR}/usr/local/eosio.cdt/lib/libc++.a")
+file(INSTALL DESTINATION "/usr/local/celesos.cdt/lib" TYPE STATIC_LIBRARY FILES "/Users/dickyang/Desktop/Data/celesos.cdt/libraries/libc++/libc++.a")
+  if(EXISTS "$ENV{DESTDIR}/usr/local/celesos.cdt/lib/libc++.a" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/celesos.cdt/lib/libc++.a")
+    execute_process(COMMAND "/Users/dickyang/Desktop/Data/celesos.cdt/bin/eosio-ranlib" "$ENV{DESTDIR}/usr/local/celesos.cdt/lib/libc++.a")
   endif()
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/usr/local/eosio.cdt/include/libcxx/")
+   "/usr/local/celesos.cdt/include/libcxx/")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local/eosio.cdt/include/libcxx" TYPE DIRECTORY FILES "/Users/dickyang/Desktop/Data/celesos.cdt/libraries/libc++/libcxx/include/")
+file(INSTALL DESTINATION "/usr/local/celesos.cdt/include/libcxx" TYPE DIRECTORY FILES "/Users/dickyang/Desktop/Data/celesos.cdt/libraries/libc++/libcxx/include/")
 endif()
 

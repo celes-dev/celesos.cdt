@@ -20,7 +20,7 @@ static llvm::cl::OptionCategory EosioLdToolCategory("ld options");
 /// begin ld options
 static cl::opt<std::string> eosio_imports_opt(
     "eosio-imports",
-    cl::desc("Set the file for eosio.imports"),
+    cl::desc("Set the file for celesos.imports"),
     cl::Hidden,
     cl::cat(LD_CAT));
 static cl::opt<std::string> pp_path_opt(
@@ -588,7 +588,7 @@ static Options CreateOptions(bool add_defaults=true) {
       ldopts.emplace_back("--allow-undefined-file="+eosio_imports_opt);
    }
    else {
-      ldopts.emplace_back("--allow-undefined-file="+eosio::cdt::whereami::where()+"/../eosio.imports");
+      ldopts.emplace_back("--allow-undefined-file="+eosio::cdt::whereami::where()+"/../celesos.imports");
    }
 #endif
 

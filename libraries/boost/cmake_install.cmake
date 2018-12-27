@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/usr/local/eosio.cdt")
+  set(CMAKE_INSTALL_PREFIX "/usr/local/celesos.cdt")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,13 +34,13 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/usr/local/eosio.cdt/include//boost")
+   "/usr/local/celesos.cdt/include//boost")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local/eosio.cdt/include/" TYPE DIRECTORY FILES "/Users/dickyang/Desktop/Data/celesos.cdt/libraries/boost/include/boost")
+file(INSTALL DESTINATION "/usr/local/celesos.cdt/include/" TYPE DIRECTORY FILES "/Users/dickyang/Desktop/Data/celesos.cdt/libraries/boost/include/boost")
 endif()
 

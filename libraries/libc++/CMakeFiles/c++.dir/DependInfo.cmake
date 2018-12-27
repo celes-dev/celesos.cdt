@@ -34,9 +34,9 @@ set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "eosio.cdt/include/libcxx"
-  "eosio.cdt/include/libc"
-  "eosio.cdt/include"
+  "celesos.cdt/include/libcxx"
+  "celesos.cdt/include/libc"
+  "celesos.cdt/include"
   "libraries/libc++/libcxx/include"
   "libraries/libc/musl/include"
   "libraries/libc/musl/src/internal"

@@ -40,7 +40,7 @@
 	BUILD_DIR="${PWD}/build"
 	CMAKE_BUILD_TYPE=Release
 	TIME_BEGIN=$( date -u +%s )
-   INSTALL_PREFIX="/usr/local/eosio.cdt"
+   INSTALL_PREFIX="/usr/local/celesos.cdt"
 	VERSION=1.2
 
 	txtbld=$(tput bold)
@@ -49,7 +49,7 @@
 
    create_symlink() {
       pushd /usr/local/bin &> /dev/null
-      ln -sf ../eosio.cdt/bin/$1 $2
+      ln -sf ../celesos.cdt/bin/$1 $2
       popd &> /dev/null
    }
 
@@ -69,9 +69,9 @@
    }
    
    create_cmake_symlink() {
-      mkdir -p /usr/local/lib/cmake/eosio.cdt
-      pushd /usr/local/lib/cmake/eosio.cdt &> /dev/null
-      ln -sf ../../../eosio.cdt/lib/cmake/eosio.cdt/$1 $1
+      mkdir -p /usr/local/lib/cmake/celesos.cdt
+      pushd /usr/local/lib/cmake/celesos.cdt &> /dev/null
+      ln -sf ../../../celesos.cdt/lib/cmake/celesos.cdt/$1 $1
       popd &> /dev/null
    }
 	if [ ! -d "${BUILD_DIR}" ]; then
@@ -93,19 +93,17 @@
    popd &> /dev/null 
 
    install_symlinks   
-   create_cmake_symlink "eosio.cdt-config.cmake"
+   create_cmake_symlink "celesos.cdt-config.cmake"
 
-   printf "\n${bldred}\t      ___           ___           ___                       ___\n"
-   printf "\t     /  /\\         /  /\\         /  /\\        ___          /  /\\ \n"
-   printf "\t    /  /:/_       /  /::\\       /  /:/_      /  /\\        /  /::\\ \n"
-   printf "\t   /  /:/ /\\     /  /:/\\:\\     /  /:/ /\\    /  /:/       /  /:/\\:\\ \n"
-   printf "\t  /  /:/ /:/_   /  /:/  \\:\\   /  /:/ /::\\  /__/::\\      /  /:/  \\:\\ \n"
-   printf "\t /__/:/ /:/ /\\ /__/:/ \\__\\:\\ /__/:/ /:/\\:\\ \\__\\/\\:\\__  /__/:/ \\__\\:\\ \n"
-   printf "\t \\  \\:\\/:/ /:/ \\  \\:\\ /  /:/ \\  \\:\\/:/~/:/    \\  \\:\\/\\ \\  \\:\\ /  /:/ \n"
-   printf "\t  \\  \\::/ /:/   \\  \\:\\  /:/   \\  \\::/ /:/      \\__\\::/  \\  \\:\\  /:/ \n"
-   printf "\t   \\  \\:\\/:/     \\  \\:\\/:/     \\__\\/ /:/       /__/:/    \\  \\:\\/:/ \n"
-   printf "\t    \\  \\::/       \\  \\::/        /__/:/        \\__\\/      \\  \\::/ \n"
-   printf "\t     \\__\\/         \\__\\/         \\__\\/                     \\__\\/ \n${txtrst}"
+printf "\n\n${bldred}"
+printf "\t #####  ####### #       #######  #####  #######  #####\n"
+printf "\t#     # #       #       #       #     # #     # #     #\n"
+printf "\t#       #       #       #       #       #     # #\n"
+printf "\t#       #####   #       #####    #####  #     #  #####\n"
+printf "\t#       #       #       #             # #     #       #\n"
+printf "\t#     # #       #       #       #     # #     # #     #\n"
+printf "\t #####  ####### ####### #######  #####  #######  #####\n"
+printf "${txtrst}"
 
 	printf "\\tFor more information:\\n"
 	printf "\\tEOSIO website: https://eos.io\\n"

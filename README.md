@@ -13,49 +13,49 @@ EOSIO.CDT currently supports Mac OS X brew, Linux x86_64 Debian packages, and Li
 
 #### Mac OS X Brew Install
 ```sh
-$ brew tap eosio/eosio.cdt
-$ brew install eosio.cdt
+$ brew tap eosio/celesos.cdt
+$ brew install celesos.cdt
 ```
 #### Mac OS X Brew Uninstall
 ```sh
-$ brew remove eosio.cdt
+$ brew remove celesos.cdt
 ```
 #### Debian Package Install
 ```sh
-$ wget https://github.com/eosio/eosio.cdt/releases/download/v1.4.1/eosio.cdt-1.4.1.x86_64.deb
-$ sudo apt install ./eosio.cdt-1.4.1.x86_64.deb
+$ wget https://github.com/eosio/celesos.cdt/releases/download/v1.4.1/celesos.cdt-1.4.1.x86_64.deb
+$ sudo apt install ./celesos.cdt-1.4.1.x86_64.deb
 ```
 #### Debian Package Uninstall
 ```sh
-$ sudo apt remove eosio.cdt
+$ sudo apt remove celesos.cdt
 ```
 
 #### Fedora RPM Package Install
 ```sh
-$ wget https://github.com/eosio/eosio.cdt/releases/download/v1.4.1/eosio.cdt-fedora-1.4.1.x86_64-0.x86_64.rpm
-$ sudo yum install ./eosio.cdt-fedora-1.4.1.x86_64-0.x86_64.rpm
+$ wget https://github.com/eosio/celesos.cdt/releases/download/v1.4.1/celesos.cdt-fedora-1.4.1.x86_64-0.x86_64.rpm
+$ sudo yum install ./celesos.cdt-fedora-1.4.1.x86_64-0.x86_64.rpm
 ```
 
 #### Fedora RPM Package Uninstall
 ```sh
-$ sudo yum remove eosio.cdt
+$ sudo yum remove celesos.cdt
 ```
 
 #### Centos RPM Package Install
 ```sh
-$ wget https://github.com/eosio/eosio.cdt/releases/download/v1.4.1/eosio.cdt-centos-1.4.1.x86_64-0.x86_64.rpm
-$ sudo yum install ./eosio.cdt-centos-1.4.1.x86_64-0.x86_64.rpm
+$ wget https://github.com/eosio/celesos.cdt/releases/download/v1.4.1/celesos.cdt-centos-1.4.1.x86_64-0.x86_64.rpm
+$ sudo yum install ./celesos.cdt-centos-1.4.1.x86_64-0.x86_64.rpm
 ```
 
 #### Centos RPM Package Uninstall
 ```sh
-$ sudo yum remove eosio.cdt
+$ sudo yum remove celesos.cdt
 ```
 
 ### Guided Installation (Building from Scratch)
 ```sh
-$ git clone --recursive https://github.com/eosio/eosio.cdt
-$ cd eosio.cdt
+$ git clone --recursive https://github.com/eosio/celesos.cdt
+$ cd celesos.cdt
 $ ./build.sh
 $ sudo ./install.sh
 ```
@@ -204,8 +204,8 @@ This will generate one file:
 - Added `CONTRACT` macro which is simply a shortcut for `class [[eosio::contract]]`.
 
 ### CMake
-- Added `eosio.cdt-config.cmake` to allow for `find_package(eosio.cdt)`. See eosio.cdt/examples/hello or eosio.cdt/examples/template for an example.
-- Added new macro `add_contract`. This new contract takes a contract name, cmake target, then any normal arguments you would give to `add_executable`. See eosio.cdt/examples/hello or eosio.cdt/examples/template.
+- Added `celesos.cdt-config.cmake` to allow for `find_package(celesos.cdt)`. See celesos.cdt/examples/hello or celesos.cdt/examples/template for an example.
+- Added new macro `add_contract`. This new contract takes a contract name, cmake target, then any normal arguments you would give to `add_executable`. See celesos.cdt/examples/hello or celesos.cdt/examples/template.
 - New version checking mechanism is included. See eosio.contracts/CMakeLists.txt to see this in use.
 
 ### libc
@@ -334,7 +334,7 @@ In `CMakeLists.txt`:
 cmake_minimum_required(VERSION 3.5)
 project(test_example VERSION 1.0.0)
 
-find_package(eosio.cdt)
+find_package(celesos.cdt)
 
 add_contract( test test test.cpp )
 ```

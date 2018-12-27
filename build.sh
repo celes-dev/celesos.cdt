@@ -1,6 +1,6 @@
 #! /bin/bash
 
-printf "\t=========== Building eosio.cdt ===========\n\n"
+printf "\t=========== Building celesos.cdt ===========\n\n"
 
 RED='\033[0;31m'
 NC='\033[0m'
@@ -18,39 +18,39 @@ if [[ "${unamestr}" == 'Darwin' ]]; then
    BOOST=/usr/local
    CXX_COMPILER=g++
    export ARCH="Darwin"
-   bash ./scripts/eosio_build_darwin.sh
+   bash ./scripts/celesos_build_darwin.sh
 else
    OS_NAME=$( cat /etc/os-release | grep ^NAME | cut -d'=' -f2 | sed 's/\"//gI' )
 
    case "$OS_NAME" in
       "Amazon Linux AMI")
          export ARCH="Amazon Linux AMI"
-         bash ./scripts/eosio_build_amazon.sh
+         bash ./scripts/celesos_build_amazon.sh
          ;;
       "CentOS Linux")
          export ARCH="Centos"
          export CMAKE=${HOME}/opt/cmake/bin/cmake
-         bash ./scripts/eosio_build_centos.sh
+         bash ./scripts/celesos_build_centos.sh
          ;;
       "elementary OS")
          export ARCH="elementary OS"
-         bash ./scripts/eosio_build_ubuntu.sh
+         bash ./scripts/celesos_build_ubuntu.sh
          ;;
       "Fedora")
          export ARCH="Fedora"
-         bash ./scripts/eosio_build_fedora.sh
+         bash ./scripts/celesos_build_fedora.sh
          ;;
       "Linux Mint")
          export ARCH="Linux Mint"
-         bash ./scripts/eosio_build_ubuntu.sh
+         bash ./scripts/celesos_build_ubuntu.sh
          ;;
       "Ubuntu")
          export ARCH="Ubuntu"
-         bash ./scripts/eosio_build_ubuntu.sh
+         bash ./scripts/celesos_build_ubuntu.sh
          ;;
       "Debian GNU/Linux")
          export ARCH="Debian"
-	 bash ./scripts/eosio_build_ubuntu.sh
+	 bash ./scripts/celesos_build_ubuntu.sh
 	 ;;
       *)
          printf "\\n\\tUnsupported Linux Distribution. Exiting now.\\n\\n"
@@ -85,7 +85,7 @@ if [ -z "$CMAKE" ]; then
   CMAKE=$( command -v cmake )
 fi
 
-"$CMAKE" -DCMAKE_INSTALL_PREFIX=/usr/local/eosio.cdt ../
+"$CMAKE" -DCMAKE_INSTALL_PREFIX=/usr/local/celesos.cdt ../
 if [ $? -ne 0 ]; then
    exit -1;
 fi
@@ -95,17 +95,15 @@ if [ $? -ne 0 ]; then
 fi
 popd &> /dev/null
 
-printf "\n${bldred}\t      ___           ___           ___                       ___\n"
-printf "\t     /  /\\         /  /\\         /  /\\        ___          /  /\\ \n"
-printf "\t    /  /:/_       /  /::\\       /  /:/_      /  /\\        /  /::\\ \n"
-printf "\t   /  /:/ /\\     /  /:/\\:\\     /  /:/ /\\    /  /:/       /  /:/\\:\\ \n"
-printf "\t  /  /:/ /:/_   /  /:/  \\:\\   /  /:/ /::\\  /__/::\\      /  /:/  \\:\\ \n"
-printf "\t /__/:/ /:/ /\\ /__/:/ \\__\\:\\ /__/:/ /:/\\:\\ \\__\\/\\:\\__  /__/:/ \\__\\:\\ \n"
-printf "\t \\  \\:\\/:/ /:/ \\  \\:\\ /  /:/ \\  \\:\\/:/~/:/    \\  \\:\\/\\ \\  \\:\\ /  /:/ \n"
-printf "\t  \\  \\::/ /:/   \\  \\:\\  /:/   \\  \\::/ /:/      \\__\\::/  \\  \\:\\  /:/ \n"
-printf "\t   \\  \\:\\/:/     \\  \\:\\/:/     \\__\\/ /:/       /__/:/    \\  \\:\\/:/ \n"
-printf "\t    \\  \\::/       \\  \\::/        /__/:/        \\__\\/      \\  \\::/ \n"
-printf "\t     \\__\\/         \\__\\/         \\__\\/                     \\__\\/ \n${txtrst}"
+printf "\n\n${bldred}"
+printf "\t #####  ####### #       #######  #####  #######  #####\n"
+printf "\t#     # #       #       #       #     # #     # #     #\n"
+printf "\t#       #       #       #       #       #     # #\n"
+printf "\t#       #####   #       #####    #####  #     #  #####\n"
+printf "\t#       #       #       #             # #     #       #\n"
+printf "\t#     # #       #       #       #     # #     # #     #\n"
+printf "\t #####  ####### ####### #######  #####  #######  #####\n"
+printf "${txtrst}"
 
 printf "\\tFor more information:\\n"
 printf "\\tEOSIO website: https://eos.io\\n"

@@ -30,9 +30,9 @@ set(CMAKE_SHARED_LIBRARY_LINK_CXX_FLAGS)
 set(CMAKE_OSX_SYSROOT="")
 set(CMAKE_OSX_DEPLOYMENT_TARGET="")
 include_directories(
-      /usr/local/eosio.cdt/include/libcxx
-      /usr/local/eosio.cdt/include/libc
-      /usr/local/eosio.cdt/include/)
+      /usr/local/celesos.cdt/include/libcxx
+      /usr/local/celesos.cdt/include/libc
+      /usr/local/celesos.cdt/include/)
 
 macro(add_contract CONTRACT_NAME TARGET)
    add_executable( ${TARGET}.wasm ${ARGN} )

@@ -25,7 +25,7 @@ sed "s/_PREFIX_/\/${SPREFIX}\/${SSUBPREFIX}/g" ${BUILD_DIR}/modules/${PROJECT}-c
 cp -R ${BUILD_DIR}/scripts/* ${CDT_PREFIX}/scripts 
 
 # install misc.
-cp ${BUILD_DIR}/eosio.imports ${CDT_PREFIX}
+cp ${BUILD_DIR}/celesos.imports ${CDT_PREFIX}
 
 # install wasm includes
 cp -R ${BUILD_DIR}/include/* ${CDT_PREFIX}/include
