@@ -78,6 +78,13 @@ extern "C" {
     */
    uint64_t  current_time();
 
+    /**
+    *  Returns the random in the number of the block
+    *  @brief Get block random from number of the block
+    *  @return Returns the random in the number of the block
+    */
+   uint64_t block_random_by_num(uint32_t num);
+
    /**
     *  Returns the time in seconds from 1970 of the block including this action
     *  @brief Get time (rounded down to the nearest second) of the current block (i.e. the block including this action)
@@ -87,13 +94,6 @@ extern "C" {
       return (uint32_t)( current_time() / 1000000 );
    }
 
-   /**
-    *  Returns the random in the number of the block
-    *  @brief Get block random from number of the block
-    *  @return Returns the random in the number of the block
-    */
-   uint64_t block_random_by_num(uint32_t num);
    ///@ } systemcapi
-
 
 }
