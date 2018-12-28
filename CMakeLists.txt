@@ -21,6 +21,10 @@ add_subdirectory(external)
 
 set(WASM_SDK_BUILD true)
 
+# set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -march=native -O3 -pthread" )
+
+set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pthread" )
+
 ### Configure the EosioWasmToolchain.cmakes
 set(CDT_ROOT_DIR ${CMAKE_BINARY_DIR})
 configure_file(${CMAKE_SOURCE_DIR}/modules/celesos.cdt-config.cmake ${CMAKE_BINARY_DIR}/lib/cmake/celesos.cdt/celesos.cdt-config.cmake @ONLY)

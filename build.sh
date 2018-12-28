@@ -13,6 +13,8 @@ export TEMP_DIR="/tmp"
 TEMP_DIR='/tmp'
 DISK_MIN=10
 
+rm  ./build/CMakeCache.txt
+
 unamestr=`uname`
 if [[ "${unamestr}" == 'Darwin' ]]; then
    BOOST=/usr/local
