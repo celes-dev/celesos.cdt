@@ -78,7 +78,26 @@ namespace eosio {
        */
       uint16_t max_authority_depth;
 
-      uint64_t   origin_difficulty;              ///origin difficulty
+      /**
+       * Origin difficulty
+       *
+       * @brief Origin difficulty
+       */
+      uint64_t origin_difficulty;
+
+      /**
+       * Base user cpu usage
+       *
+       * @brief Base user cpu usage
+       */
+      uint16_t base_user_cpu_usage;
+
+      /**
+       * Base user net usage
+       *
+       * @brief Base user net usage
+       */
+      uint16_t base_user_net_usage;
 
 
       EOSLIB_SERIALIZE( blockchain_parameters,
@@ -90,7 +109,7 @@ namespace eosio {
                         (max_transaction_cpu_usage)(min_transaction_cpu_usage)
 
                         (max_transaction_lifetime)(deferred_trx_expiration_window)(max_transaction_delay)
-                        (max_inline_action_size)(max_inline_action_depth)(max_authority_depth)(origin_difficulty)
+                        (max_inline_action_size)(max_inline_action_depth)(max_authority_depth)(origin_difficulty)(base_user_cpu_usage)(base_user_net_usage)
       )
    };
 
