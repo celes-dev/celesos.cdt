@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:18.04 as builder
 
 LABEL MAINTAINER=yale.zheng@blockc.pro
 
@@ -21,4 +21,6 @@ RUN cd /usr/src/celesos-cdt && \
     bash build.sh && \
     bash install.sh
 
+FROM ubuntu:18.04
 
+COPY --from=builder /usr/local/celesos.cdt /usr/local/celesos.cdt
