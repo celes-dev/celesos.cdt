@@ -34,5 +34,10 @@
 # Mac OS
 .DS_Store
 
+# IDE
+.idea
+.vscode
+
 # Build
 build/*
+cmake-build-*/

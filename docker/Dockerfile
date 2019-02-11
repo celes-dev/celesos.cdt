@@ -1,13 +1,24 @@
 FROM ubuntu:18.04
 
-# Arguments that may be overridden by the user
-ARG release=latest
+LABEL MAINTAINER=yale.zheng@blockc.pro
 
-# Install required packages
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y install openssl ca-certificates curl wget && rm -rf /var/lib/apt/lists/*
+ARG branch='master'
+ARG git_credential=''
 
-# Install CDT from deb package
-ADD install_deb.sh /
-RUN /install_deb.sh $release && rm -f install_deb.sh
+# install build essential
+RUN apt-get update && \
+    apt-get install \
+        clang-4.0 lldb-4.0 libclang-4.0-dev cmake make automake libbz2-dev libssl-dev \
+        libgmp3-dev autotools-dev build-essential libicu-dev python2.7-dev python3-dev \
+        autoconf libtool curl zlib1g-dev doxygen graphviz git -y
 
-USER root
+# clone repository
+RUN git clone --branch ${branch} --recurse-submodules \
+        "http://${git_credential}172.12.0.11/celesos/celesos.cdt.git" /usr/src/celesos-cdt
+
+# build and install
+RUN cd /usr/src/celesos-cdt && \
+    bash build.sh && \
+    bash install.sh
+
+
