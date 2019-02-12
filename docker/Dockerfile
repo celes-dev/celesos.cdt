@@ -24,3 +24,4 @@ RUN cd /usr/src/celesos-cdt && \
 FROM ubuntu:18.04
 
 COPY --from=builder /usr/local/celesos.cdt /usr/local/celesos.cdt
+COPY --from=builder /usr/local/bin /usr/local/bin
