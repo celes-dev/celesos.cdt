@@ -1,0 +1,14 @@
+# Target labels
+ EosioClang
+# Source files and their labels
+/Users/dickyang/Desktop/Data/celesos.cdt/build/CMakeFiles/EosioClang
+/Users/dickyang/Desktop/Data/celesos.cdt/build/CMakeFiles/EosioClang.rule
+/Users/dickyang/Desktop/Data/celesos.cdt/build/CMakeFiles/EosioClang-complete.rule
+/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioClang-prefix/src/EosioClang-stamp/EosioClang-install.rule
+/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioClang-prefix/src/EosioClang-stamp/EosioClang-mkdir.rule
+/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioClang-prefix/src/EosioClang-stamp/EosioClang-download.rule
+/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioClang-prefix/src/EosioClang-stamp/EosioClang-update.rule
+/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioClang-prefix/src/EosioClang-stamp/EosioClang-patch.rule
+/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioClang-prefix/src/EosioClang-stamp/EosioClang-configure.rule
+/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioClang-prefix/src/EosioClang-stamp/EosioClang-build.rule
+/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioClang-prefix/src/EosioClang-stamp/EosioClang-test.rule

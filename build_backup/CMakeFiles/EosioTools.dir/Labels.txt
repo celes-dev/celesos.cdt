@@ -1,0 +1,14 @@
+# Target labels
+ EosioTools
+# Source files and their labels
+/Users/dickyang/Desktop/Data/celesos.cdt/build/CMakeFiles/EosioTools
+/Users/dickyang/Desktop/Data/celesos.cdt/build/CMakeFiles/EosioTools.rule
+/Users/dickyang/Desktop/Data/celesos.cdt/build/CMakeFiles/EosioTools-complete.rule
+/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioTools-prefix/src/EosioTools-stamp/EosioTools-install.rule
+/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioTools-prefix/src/EosioTools-stamp/EosioTools-mkdir.rule
+/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioTools-prefix/src/EosioTools-stamp/EosioTools-download.rule
+/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioTools-prefix/src/EosioTools-stamp/EosioTools-update.rule
+/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioTools-prefix/src/EosioTools-stamp/EosioTools-patch.rule
+/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioTools-prefix/src/EosioTools-stamp/EosioTools-configure.rule
+/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioTools-prefix/src/EosioTools-stamp/EosioTools-build.rule
+/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioTools-prefix/src/EosioTools-stamp/EosioTools-test.rule

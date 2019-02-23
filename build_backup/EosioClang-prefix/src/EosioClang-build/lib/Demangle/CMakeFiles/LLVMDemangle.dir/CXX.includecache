@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/dickyang/Desktop/Data/celesos.cdt/eosio_llvm/include/llvm/Demangle/Demangle.h
+cstddef
+-
+
+/Users/dickyang/Desktop/Data/celesos.cdt/eosio_llvm/lib/Demangle/ItaniumDemangle.cpp
+llvm/Demangle/Demangle.h
+/Users/dickyang/Desktop/Data/celesos.cdt/eosio_llvm/lib/Demangle/llvm/Demangle/Demangle.h
+algorithm
+-
+cassert
+-
+cctype
+-
+cstdio
+-
+cstdlib
+-
+cstring
+-
+numeric
+-
+vector
+-
+

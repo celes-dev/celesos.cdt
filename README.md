@@ -1,5 +1,5 @@
 # EOSIO.CDT (Contract Development Toolkit)
-## Version : 1.4.1
+## Version : 0.9.0
 
 EOSIO.CDT is a toolchain for WebAssembly (WASM) and set of tools to facilitate contract writing for the EOSIO platform.  In addition to being a general purpose WebAssembly toolchain, [EOSIO](https://github.com/eosio/eos) specific optimizations are available to support building EOSIO smart contracts.  This new toolchain is built around [Clang 7](https://github.com/eosio/llvm), which means that EOSIO.CDT has the most currently available optimizations and analyses from LLVM, but as the WASM target is still considered experimental, some optimizations are not available or incomplete.
 
@@ -22,8 +22,8 @@ $ brew remove celesos.cdt
 ```
 #### Debian Package Install
 ```sh
-$ wget https://github.com/eosio/celesos.cdt/releases/download/v1.4.1/celesos.cdt-1.4.1.x86_64.deb
-$ sudo apt install ./celesos.cdt-1.4.1.x86_64.deb
+$ wget https://github.com/eosio/celesos.cdt/releases/download/v0.9.0/celesos.cdt-0.9.0.x86_64.deb
+$ sudo apt install ./celesos.cdt-0.9.0.x86_64.deb
 ```
 #### Debian Package Uninstall
 ```sh
@@ -32,8 +32,8 @@ $ sudo apt remove celesos.cdt
 
 #### Fedora RPM Package Install
 ```sh
-$ wget https://github.com/eosio/celesos.cdt/releases/download/v1.4.1/celesos.cdt-fedora-1.4.1.x86_64-0.x86_64.rpm
-$ sudo yum install ./celesos.cdt-fedora-1.4.1.x86_64-0.x86_64.rpm
+$ wget https://github.com/eosio/celesos.cdt/releases/download/v0.9.0/celesos.cdt-fedora-0.9.0.x86_64-0.x86_64.rpm
+$ sudo yum install ./celesos.cdt-fedora-0.9.0.x86_64-0.x86_64.rpm
 ```
 
 #### Fedora RPM Package Uninstall
@@ -43,8 +43,8 @@ $ sudo yum remove celesos.cdt
 
 #### Centos RPM Package Install
 ```sh
-$ wget https://github.com/eosio/celesos.cdt/releases/download/v1.4.1/celesos.cdt-centos-1.4.1.x86_64-0.x86_64.rpm
-$ sudo yum install ./celesos.cdt-centos-1.4.1.x86_64-0.x86_64.rpm
+$ wget https://github.com/eosio/celesos.cdt/releases/download/v0.9.0/celesos.cdt-centos-0.9.0.x86_64-0.x86_64.rpm
+$ sudo yum install ./celesos.cdt-centos-0.9.0.x86_64-0.x86_64.rpm
 ```
 
 #### Centos RPM Package Uninstall

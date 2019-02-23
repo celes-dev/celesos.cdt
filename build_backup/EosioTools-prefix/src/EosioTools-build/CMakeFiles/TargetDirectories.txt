@@ -1,0 +1,16 @@
+/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioTools-prefix/src/EosioTools-build/CMakeFiles/rebuild_cache.dir
+/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioTools-prefix/src/EosioTools-build/CMakeFiles/edit_cache.dir
+/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioTools-prefix/src/EosioTools-build/CMakeFiles/intrinsics_gen.dir
+/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioTools-prefix/src/EosioTools-build/abigen/CMakeFiles/rebuild_cache.dir
+/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioTools-prefix/src/EosioTools-build/abigen/CMakeFiles/edit_cache.dir
+/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioTools-prefix/src/EosioTools-build/abigen/CMakeFiles/eosio-abigen.dir
+/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioTools-prefix/src/EosioTools-build/abidiff/CMakeFiles/rebuild_cache.dir
+/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioTools-prefix/src/EosioTools-build/abidiff/CMakeFiles/edit_cache.dir
+/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioTools-prefix/src/EosioTools-build/abidiff/CMakeFiles/eosio-abidiff.dir
+/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioTools-prefix/src/EosioTools-build/cc/CMakeFiles/rebuild_cache.dir
+/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioTools-prefix/src/EosioTools-build/cc/CMakeFiles/edit_cache.dir
+/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioTools-prefix/src/EosioTools-build/cc/CMakeFiles/eosio-cpp.dir
+/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioTools-prefix/src/EosioTools-build/cc/CMakeFiles/eosio-cc.dir
+/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioTools-prefix/src/EosioTools-build/ld/CMakeFiles/rebuild_cache.dir
+/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioTools-prefix/src/EosioTools-build/ld/CMakeFiles/edit_cache.dir
+/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioTools-prefix/src/EosioTools-build/ld/CMakeFiles/eosio-ld.dir

@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/dickyang/Desktop/Data/celesos.cdt/build/CMakeFiles/EosioTools"
+		},
+		{
+			"file" : "/Users/dickyang/Desktop/Data/celesos.cdt/build/CMakeFiles/EosioTools.rule"
+		},
+		{
+			"file" : "/Users/dickyang/Desktop/Data/celesos.cdt/build/CMakeFiles/EosioTools-complete.rule"
+		},
+		{
+			"file" : "/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioTools-prefix/src/EosioTools-stamp/EosioTools-install.rule"
+		},
+		{
+			"file" : "/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioTools-prefix/src/EosioTools-stamp/EosioTools-mkdir.rule"
+		},
+		{
+			"file" : "/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioTools-prefix/src/EosioTools-stamp/EosioTools-download.rule"
+		},
+		{
+			"file" : "/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioTools-prefix/src/EosioTools-stamp/EosioTools-update.rule"
+		},
+		{
+			"file" : "/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioTools-prefix/src/EosioTools-stamp/EosioTools-patch.rule"
+		},
+		{
+			"file" : "/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioTools-prefix/src/EosioTools-stamp/EosioTools-configure.rule"
+		},
+		{
+			"file" : "/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioTools-prefix/src/EosioTools-stamp/EosioTools-build.rule"
+		},
+		{
+			"file" : "/Users/dickyang/Desktop/Data/celesos.cdt/build/EosioTools-prefix/src/EosioTools-stamp/EosioTools-test.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"EosioTools"
+		],
+		"name" : "EosioTools"
+	}
+}
