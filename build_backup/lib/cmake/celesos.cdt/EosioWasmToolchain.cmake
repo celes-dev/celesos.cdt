@@ -1,11 +1,11 @@
-message(STATUS "Setting up Eosio Wasm Toolchain 1.4.1 at /Users/dickyang/Desktop/Data/celesos.cdt/build")
+message(STATUS "Setting up Eosio Wasm Toolchain 0.9.0 at /Users/dickyang/Desktop/Data/celesos.cdt/build")
 set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_CROSSCOMPILING 1)
 set(CMAKE_C_COMPILER_WORKS 1)
 set(CMAKE_CXX_COMPILER_WORKS 1)
 
-set(CELESOS_CDT_VERSION "1.4.1")
-set(EOSIO_WASMSDK_VERSION "1.4.1")
+set(CELESOS_CDT_VERSION "0.9.0")
+set(EOSIO_WASMSDK_VERSION "0.9.0")
 
 set(CMAKE_C_COMPILER "/Users/dickyang/Desktop/Data/celesos.cdt/build/bin/eosio-cc" CACHE PATH "cc" FORCE)
 set(CMAKE_CXX_COMPILER "/Users/dickyang/Desktop/Data/celesos.cdt/build/bin/eosio-cpp" CACHE PATH "cxx" FORCE)
