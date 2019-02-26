@@ -1,1 +1,0 @@
-cmd='/usr/local/Cellar/cmake/3.11.4/bin/cmake;-DCMAKE_INSTALL_PREFIX=/usr/local/celesos.cdt/llvm;-DCMAKE_BUILD_TYPE=Release;-DEOSIO_VER_MAJOR=1;-DEOSIO_VER_MINOR=4;-DEOSIO_VER_REVISION=1;-DEOSIO_STACK_SIZE=8192;-GUnix Makefiles;<SOURCE_DIR><SOURCE_SUBDIR>'
