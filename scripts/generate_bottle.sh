@@ -14,6 +14,8 @@ else
    MAC_VERSION="high_sierra"
 fi
 
+NAME="${PROJECT}-${VERSION}.${MAC_VERSION}.bottle.tar.gz"
+
 mkdir -p ${PROJECT}/${VERSION}/opt/celesos_cdt/lib/cmake
 
 PREFIX="${PROJECT}/${VERSION}"
@@ -34,7 +36,7 @@ echo "class EosioCdt < Formula
 
    homepage \"${URL}\"
    revision 0
-   url \"https://github.com/eosio/celesos.cdt/archive/v${VERSION}.tar.gz\"
+   url \"https://github.com/celes-dev/celesos.cdt/archive/v${VERSION}.tar.gz\"
    version \"${VERSION}\"
    
    option :universal
@@ -53,7 +55,7 @@ echo "class EosioCdt < Formula
    depends_on :arch =>  :intel
   
    bottle do
-      root_url \"https://github.com/eosio/celesos.cdt/releases/download/v${VERSION}\"
+      root_url \"https://github.com/celes-dev/celesos.cdt/releases/download/v${VERSION}\"
       sha256 \"${hash}\" => :${MAC_VERSION}
    end
    def install
