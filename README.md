@@ -11,7 +11,7 @@ CELESOS.CDT currently supports Mac OS X brew, Linux x86_64 Debian packages, and 
 
 #### Mac OS X Brew Install
 ```sh
-$ brew tap celesos/celesos.cdt
+$ brew tap celes-dev/celesos.cdt
 $ brew install celesos.cdt
 ```
 
