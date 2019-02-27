@@ -36,7 +36,7 @@ echo "class CelesosCdt < Formula
 
    homepage \"${URL}\"
    revision 0
-   url \"https://github.com/celes-dev/celesos.cdt/archive/v${VERSION}\"
+   url \"https://github.com/celes-dev/celesos.cdt/archive/v${VERSION}.tar.gz\"
    version \"${VERSION}\"
    
    option :universal
