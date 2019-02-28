@@ -56,7 +56,7 @@ install(FILES ${CMAKE_BINARY_DIR}/scripts/ricardeos.py DESTINATION ${CMAKE_INSTA
 set(VENDOR "block.one")
 set(PROJECT_NAME "celesos.cdt")
 set(DESC "Toolchain and supporting tools for the EOS.IO platform")
-set(URL "https://github.com/eosio/celesos.cdt")
+set(URL "https://github.com/celes-dev/celesos.cdt")
 set(EMAIL "info@celesos.com")
 configure_file(${CMAKE_SOURCE_DIR}/scripts/generate_package.sh.in ${CMAKE_BINARY_DIR}/packages/generate_package.sh @ONLY)
 configure_file(${CMAKE_SOURCE_DIR}/scripts/generate_deb.sh ${CMAKE_BINARY_DIR}/packages/generate_deb.sh COPYONLY)
