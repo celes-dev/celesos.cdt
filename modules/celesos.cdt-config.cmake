@@ -2,6 +2,7 @@ if(CELESOS_CDT_ROOT STREQUAL "" OR NOT CELESOS_CDT_ROOT)
    set(CELESOS_CDT_ROOT "@CDT_ROOT_DIR@")
 endif()
 list(APPEND CMAKE_MODULE_PATH ${CELESOS_CDT_ROOT}/lib/cmake/celesos.cdt)
+list(APPEND CMAKE_MODULE_PATH ${CELESOS_CDT_ROOT}/lib64/cmake/celesos.cdt)
 include(EosioWasmToolchain)
 
 function(EXTRACT_MAJOR_MINOR_FROM_VERSION version success major minor)

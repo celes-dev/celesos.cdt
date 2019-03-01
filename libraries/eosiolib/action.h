@@ -19,7 +19,7 @@ extern "C" {
     * @brief Defines API for querying action and sending action
     *
     *
-    * A EOS.IO action has the following abstract structure:
+    * A CELESOS action has the following abstract structure:
     *
     * ```
     *   struct action {
