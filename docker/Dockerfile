@@ -3,7 +3,6 @@ FROM ubuntu:18.04 as builder
 LABEL MAINTAINER=yale.zheng@blockc.pro
 
 ARG branch='master'
-ARG git_credential=''
 
 # install build essential
 RUN apt-get update && \
@@ -13,8 +12,9 @@ RUN apt-get update && \
         autoconf libtool curl zlib1g-dev doxygen graphviz git -y
 
 # clone repository
+ADD https://api.github.com/repos/celes-dev/celesos.cdt/commits/${branch} /etc/celesos.cdt-version
 RUN git clone --branch ${branch} --recurse-submodules \
-        "http://${git_credential}172.12.0.11/celesos/celesos.cdt.git" /usr/src/celesos-cdt
+        "https://github.com/celes-dev/celesos.cdt.git" /usr/src/celesos-cdt
 
 # build and install
 RUN cd /usr/src/celesos-cdt && \
