@@ -20,22 +20,16 @@ $ brew install celesos.cdt
 $ brew remove celesos.cdt
 ```
 
-#### Ubuntu 18.04 Debian Package Install
+#### Ubuntu 18.04 / Mint 19 Debian Package Install
 ```sh
 $ wget https://github.com/celes-dev/celesos.cdt/releases/download/v0.9.0/celesos.cdt_0.9.0-1-ubuntu-18.04_amd64.deb
 $ sudo apt install ./celesos.cdt_0.9.0-1-ubuntu-18.04_amd64.deb
 ```
 
-#### Ubuntu 16.04 Debian Package Install
+#### Ubuntu 16.04 / Mint 18 Debian Package Install
 ```sh
 $ wget https://github.com/celes-dev/celesos.cdt/releases/download/v0.9.0/celesos.cdt_0.9.0-1-ubuntu-16.04_amd64.deb
 $ sudo apt install ./celesos.cdt_0.9.0-1-ubuntu-16.04_amd64.deb
-```
-
-#### Mint 18 Debian Package Install
-```sh
-$ wget https://github.com/celes-dev/celesos.cdt/releases/download/v0.9.0/celesos.cdt-0.9.0-1.el7.x86_64.rpm
-$ sudo apt install ./celesos.cdt-0.9.0-1.el7.x86_64.rpm
 ```
 
 #### Debian Package Uninstall
