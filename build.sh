@@ -108,4 +108,4 @@ printf "\t #####  ####### ####### #######  #####  #######  #####\n"
 printf "${txtrst}"
 
 printf "\\tFor more information:\\n"
-printf "\\CELESOS website: https://www.celesos.com\\n"
+printf "\\tCELESOS website: https://www.celesos.com\\n"
