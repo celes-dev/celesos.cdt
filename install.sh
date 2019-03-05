@@ -27,7 +27,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 #
-# https://github.com/EOSIO/eos/blob/master/LICENSE.txt
+# https://github.com/celes-dev/celesos/blob/master/LICENSE.txt
 ##########################################################################
    
 
@@ -54,7 +54,7 @@
    }
 
    install_symlinks() {
-		printf "\\n\\tInstalling EOSIO.CDT Binary Symlinks\\n\\n"
+		printf "\\n\\tInstalling CELESOS.CDT Binary Symlinks\\n\\n"
       create_symlink "llvm-ranlib eosio-ranlib"
       create_symlink "llvm-ar eosio-ar"
       create_symlink "llvm-objdump eosio-objdump"
@@ -87,7 +87,7 @@
    
 	if ! make install
 	then
-		printf "\\n\\t>>>>>>>>>>>>>>>>>>>> MAKE installing EOSIO has exited with the above error.\\n\\n"
+		printf "\\n\\t>>>>>>>>>>>>>>>>>>>> MAKE installing CELESOS has exited with the above error.\\n\\n"
 		exit -1
 	fi
    popd &> /dev/null 
@@ -106,4 +106,4 @@ printf "\t #####  ####### ####### #######  #####  #######  #####\n"
 printf "${txtrst}"
 
 	printf "\\tFor more information:\\n"
-	printf "\\tEOSIO website: https://eos.io\\n"
+	printf "\\CELESOS website: https://www.celesos.com\\n"
