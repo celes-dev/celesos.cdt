@@ -1,27 +1,13 @@
-FROM ubuntu:18.04 as builder
-
-LABEL MAINTAINER=yale.zheng@blockc.pro
-
-ARG branch='master'
-
-# install build essential
-RUN apt-get update && \
-    apt-get install \
-        clang-4.0 lldb-4.0 libclang-4.0-dev cmake make automake libbz2-dev libssl-dev \
-        libgmp3-dev autotools-dev build-essential libicu-dev python2.7-dev python3-dev \
-        autoconf libtool curl zlib1g-dev doxygen graphviz git -y
-
-# clone repository
-ADD https://api.github.com/repos/celes-dev/celesos.cdt/commits/${branch} /etc/celesos.cdt-version
-RUN git clone --branch ${branch} --recurse-submodules \
-        "https://github.com/celes-dev/celesos.cdt.git" /usr/src/celesos-cdt
-
-# build and install
-RUN cd /usr/src/celesos-cdt && \
-    bash build.sh && \
-    bash install.sh
-
 FROM ubuntu:18.04
 
-COPY --from=builder /usr/local/celesos.cdt /usr/local/celesos.cdt
-COPY --from=builder /usr/local/bin /usr/local/bin
+# Install required packages
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y install openssl ca-certificates curl wget build-essential cmake make && rm -rf /var/lib/apt/lists/*
+
+# Arguments that may be overridden by the user
+ARG release=latest
+
+# Install CDT from deb package
+ADD install_deb.sh /
+RUN /install_deb.sh $release && rm -f install_deb.sh
+
+USER root
