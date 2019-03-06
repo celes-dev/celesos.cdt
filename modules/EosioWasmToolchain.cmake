@@ -1,11 +1,11 @@
-message(STATUS "Setting up Eosio Wasm Toolchain 0.9.0 at /usr/local")
+message(STATUS "Setting up Eosio Wasm Toolchain 1.0.0 at /usr/local")
 set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_CROSSCOMPILING 1)
 set(CMAKE_C_COMPILER_WORKS 1)
 set(CMAKE_CXX_COMPILER_WORKS 1)
 
-set(CELESOS_CDT_VERSION "0.9.0")
-set(EOSIO_WASMSDK_VERSION "0.9.0")
+set(CELESOS_CDT_VERSION "1.0.0")
+set(EOSIO_WASMSDK_VERSION "1.0.0")
 
 set(CMAKE_C_COMPILER "/usr/local/bin/eosio-cc" CACHE PATH "cc" FORCE)
 set(CMAKE_CXX_COMPILER "/usr/local/bin/eosio-cpp" CACHE PATH "cxx" FORCE)

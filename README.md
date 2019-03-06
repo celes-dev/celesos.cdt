@@ -1,5 +1,5 @@
 # CELESOS.CDT (Contract Development Toolkit)
-## Version : 0.9.0
+## Version : 1.0.0
 
 CELESOS.CDT is a toolchain for WebAssembly (WASM) and set of tools to facilitate contract writing for the CELESOS platform.  In addition to being a general purpose WebAssembly toolchain, [CELESOS](https://github.com/celes-dev/celesos) specific optimizations are available to support building CELESOS smart contracts.  This new toolchain is built around [Clang 7](https://github.com/eosio/llvm), which means that CELESOS.CDT has the most currently available optimizations and analyses from LLVM, but as the WASM target is still considered experimental, some optimizations are not available or incomplete.
 
@@ -22,14 +22,14 @@ $ brew remove celesos.cdt
 
 #### Ubuntu 18.04 / Mint 19 Debian Package Install
 ```sh
-$ wget https://github.com/celes-dev/celesos.cdt/releases/download/v0.9.0/celesos.cdt_0.9.0-1-ubuntu-18.04_amd64.deb
-$ sudo apt install ./celesos.cdt_0.9.0-1-ubuntu-18.04_amd64.deb
+$ wget https://github.com/celes-dev/celesos.cdt/releases/download/v1.0.0/celesos.cdt_1.0.0-1-ubuntu-18.04_amd64.deb
+$ sudo apt install ./celesos.cdt_1.0.0-1-ubuntu-18.04_amd64.deb
 ```
 
 #### Ubuntu 16.04 / Mint 18 Debian Package Install
 ```sh
-$ wget https://github.com/celes-dev/celesos.cdt/releases/download/v0.9.0/celesos.cdt_0.9.0-1-ubuntu-16.04_amd64.deb
-$ sudo apt install ./celesos.cdt_0.9.0-1-ubuntu-16.04_amd64.deb
+$ wget https://github.com/celes-dev/celesos.cdt/releases/download/v1.0.0/celesos.cdt_1.0.0-1-ubuntu-16.04_amd64.deb
+$ sudo apt install ./celesos.cdt_1.0.0-1-ubuntu-16.04_amd64.deb
 ```
 
 #### Debian Package Uninstall
@@ -39,8 +39,8 @@ $ sudo apt remove celesos.cdt
 
 #### Fedora RPM Package Install
 ```sh
-$ wget https://github.com/celes-dev/celesos.cdt/releases/download/v0.9.0/celesos.cdt-0.9.0-1.fc27.x86_64.rpm
-$ sudo yum install ./celesos.cdt-0.9.0-1.fc27.x86_64.rpm
+$ wget https://github.com/celes-dev/celesos.cdt/releases/download/v1.0.0/celesos.cdt-1.0.0-1.fc27.x86_64.rpm
+$ sudo yum install ./celesos.cdt-1.0.0-1.fc27.x86_64.rpm
 ```
 
 #### Fedora RPM Package Uninstall
@@ -50,8 +50,8 @@ $ sudo yum remove celesos.cdt
 
 #### Centos RPM Package Install
 ```sh
-$ wget https://github.com/celes-dev/celesos.cdt/releases/download/v0.9.0/celesos.cdt-0.9.0-1.el7.x86_64.rpm
-$ sudo yum install ./celesos.cdt-0.9.0-1.el7.x86_64.rpm
+$ wget https://github.com/celes-dev/celesos.cdt/releases/download/v1.0.0/celesos.cdt-1.0.0-1.el7.x86_64.rpm
+$ sudo yum install ./celesos.cdt-1.0.0-1.el7.x86_64.rpm
 ```
 
 #### Centos RPM Package Uninstall

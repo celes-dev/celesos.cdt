@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.5)
 project(celesos_cdt)
 
-set(VERSION_MAJOR 0)
-set(VERSION_MINOR 9)
+set(VERSION_MAJOR 1)
+set(VERSION_MINOR 0)
 set(VERSION_PATCH 0)
 
 if (CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
