@@ -85,6 +85,8 @@ extern "C" {
     */
    uint64_t block_random_by_num(uint32_t num);
 
+   uint32_t get_chain_head_num();
+
    /**
     *  Returns the time in seconds from 1970 of the block including this action
     *  @brief Get time (rounded down to the nearest second) of the current block (i.e. the block including this action)
