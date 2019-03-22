@@ -124,6 +124,8 @@ extern "C" {
 
     bool is_systemaccount_transaction( const char* trx_data,     uint32_t trx_size);
 
+   void set_name_list_packed(uint32_t list, uint32_t action, char* data, uint32_t datalen);
+
    ///@ } privilegedcapi
 #ifdef __cplusplus
 }
