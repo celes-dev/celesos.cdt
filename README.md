@@ -106,3 +106,17 @@ License
 ----
 
 MIT
+
+### Installed Tools
+---
+* eosio-cpp
+* eosio-cc
+* eosio-ld
+* eosio-init
+* eosio-abidiff
+* eosio-wasm2wast
+* eosio-wast2wasm
+* eosio-ranlib
+* eosio-ar
+* eosio-objdump
+* eosio-readelf

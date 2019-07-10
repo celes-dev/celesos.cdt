@@ -1,9 +1,15 @@
 if(CELESOS_CDT_ROOT STREQUAL "" OR NOT CELESOS_CDT_ROOT)
    set(CELESOS_CDT_ROOT "@CDT_ROOT_DIR@")
 endif()
+
 list(APPEND CMAKE_MODULE_PATH ${CELESOS_CDT_ROOT}/lib/cmake/celesos.cdt)
-list(APPEND CMAKE_MODULE_PATH ${CELESOS_CDT_ROOT}/lib64/cmake/celesos.cdt)
-include(EosioWasmToolchain)
+if (NOT EOSIO_WASM_OLD_BEHAVIOR STREQUAL "Off")
+    set(EOSIO_WASM_OLD_BEHAVIOR "On")
+    include(EosioWasmToolchain)
+endif()
+
+include(EosioCDTMacros)
+  
 
 function(EXTRACT_MAJOR_MINOR_FROM_VERSION version success major minor)
    string(REGEX REPLACE "^([0-9]+)\\..+$" "\\1" _major "${version}")
@@ -23,7 +29,7 @@ function(EXTRACT_MAJOR_MINOR_FROM_VERSION version success major minor)
    set(${success} TRUE      PARENT_SCOPE)
 endfunction(EXTRACT_MAJOR_MINOR_FROM_VERSION)
 
-function(CELESOS_CHECK_VERSION output version hard_min soft_max hard_max) # optional 6th argument for error message
+function(EOSIO_CHECK_VERSION output version hard_min soft_max hard_max) # optional 6th argument for error message
    set(${output} "INVALID" PARENT_SCOPE)
 
    EXTRACT_MAJOR_MINOR_FROM_VERSION("${version}" success major minor)
@@ -94,4 +100,4 @@ function(CELESOS_CHECK_VERSION output version hard_min soft_max hard_max) # opti
    endif()
 
    set(${output} "MATCH" PARENT_SCOPE)
-endfunction(CELESOS_CHECK_VERSION)
+endfunction(EOSIO_CHECK_VERSION)
