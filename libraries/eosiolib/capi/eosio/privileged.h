@@ -85,6 +85,132 @@ void set_blockchain_parameters_packed( char* data, uint32_t datalen );
 __attribute__((eosio_wasm_import))
 uint32_t get_blockchain_parameters_packed( char* data, uint32_t datalen );
 
+/**
+ * calc user's ram attenuation
+ *
+ * @param name - user name.
+ * @return size of the ram attenuation
+ */
+__attribute__((eosio_wasm_import))
+int64_t ram_attenuation(capi_name name);
+
+/**
+ * calc need attenuation account
+ *
+ * @return user name
+ */
+__attribute__((eosio_wasm_import))
+uint64_t get_need_attenuation_account();
+
+/**
+ * tell the chain new pow difficulty
+ *
+ * @param difficulty the new difficulty
+ * @return if success,return yes. or return no.
+ */
+__attribute__((eosio_wasm_import))
+bool set_difficulty(double difficulty);
+
+/**
+ * verify wood is valid
+ *
+ * @param block_number - the forest block number.
+ * @param account - the wood owner account.
+ * @param wood - the wood.
+ * @return is this wood valid.
+ */
+__attribute__((eosio_wasm_import))
+bool verify_wood(uint32_t block_number, capi_name account, const char* wood);
+
+/**
+ * forest_period_number
+ *
+ * @return forest_period_number
+ */
+__attribute__((eosio_wasm_import))
+uint32_t forest_period_number();
+
+/**
+ * forest_space_number
+ *
+ * @return forest_space_number
+ */
+__attribute__((eosio_wasm_import))
+uint32_t forest_space_number();
+
+/**
+ * reg dbp
+ *
+ * @param account - user account
+ * @return is success
+ */
+__attribute__((eosio_wasm_import))
+bool cregdbp(capi_name account);
+
+/**
+ * unreg dbp
+ *
+ * @param account - user account
+ * @return is success
+ */
+__attribute__((eosio_wasm_import))
+void cunregdbp(capi_name account);
+
+/**
+ * calc unpaid user resource weight
+ *
+ * @param account - user account
+ * @return unpaid user resource weight
+ */
+__attribute__((eosio_wasm_import))
+int64_t unpaid_resouresweight(capi_name account);
+
+/**
+ * calc all user resource weight
+ *
+ * @return unpaid all user resource weight
+ */
+__attribute__((eosio_wasm_import))
+int64_t total_unpaid_resouresweight();
+
+/**
+ * sign this user is claimed
+ *
+ * @param account - user account
+ */
+__attribute__((eosio_wasm_import))
+void setclaimed(capi_name account);
+
+/**
+ * judge this transaction is or not system transaction
+ *
+ * @param trx_data -transaction data.
+ * @param trx_size - size of transaction data.
+ * @return is or not system transaction.
+ */
+__attribute__((eosio_wasm_import))
+bool is_systemaccount_transaction( char* trx_data, uint32_t trx_size);
+
+/**
+ * set whitle/gray/black list
+ *
+ * @param list - list type.
+ * @param action - add/remove/modify.
+ * @param data - data
+ * @param datalen - size of the data.
+ * @return is success.
+ */
+__attribute__((eosio_wasm_import))
+void set_name_list_packed(uint32_t list, uint32_t action, char* data, uint32_t datalen);
+
+/**
+ * get chain head blocknum
+ *
+ * @return chain head blocknum.
+ */
+__attribute__((eosio_wasm_import))
+uint32_t get_chain_head_num();
+
 #ifdef __cplusplus
 }
 #endif

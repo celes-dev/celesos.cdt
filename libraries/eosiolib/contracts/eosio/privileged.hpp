@@ -28,6 +28,49 @@ namespace eosio {
 
         __attribute((eosio_wasm_import))
         int64_t set_proposed_producers( char*, uint32_t );
+
+         __attribute__((eosio_wasm_import))
+         int64_t ram_attenuation(uint64_t account);
+
+         __attribute__((eosio_wasm_import))
+         uint64_t get_need_attenuation_account();
+
+         __attribute__((eosio_wasm_import))
+         bool set_difficulty(double difficulty);
+
+         __attribute__((eosio_wasm_import))
+         bool verify_wood(uint32_t block_number, uint64_t account, const char* wood);
+
+         __attribute__((eosio_wasm_import))
+         uint32_t forest_period_number();
+
+         __attribute__((eosio_wasm_import))
+         uint32_t forest_space_number();
+
+         __attribute__((eosio_wasm_import))
+         bool cregdbp(uint64_t account);
+
+         __attribute__((eosio_wasm_import))
+         void cunregdbp(uint64_t account);
+
+         __attribute__((eosio_wasm_import))
+         int64_t unpaid_resouresweight(uint64_t account);
+
+         __attribute__((eosio_wasm_import))
+         int64_t total_unpaid_resouresweight();
+
+         __attribute__((eosio_wasm_import))
+         void setclaimed(uint64_t account);
+
+         __attribute__((eosio_wasm_import))
+         bool is_systemaccount_transaction(char* trx_data, uint32_t trx_size);
+
+         __attribute__((eosio_wasm_import))
+         void set_name_list_packed(uint32_t list, uint32_t action, char* data, uint32_t datalen);
+
+         __attribute__((eosio_wasm_import))
+         uint32_t get_chain_head_num();
+
       }
    }
 
@@ -145,6 +188,27 @@ namespace eosio {
        */
       uint16_t max_authority_depth;
 
+      /**
+       * Origin difficulty
+       *
+       * @brief Origin difficulty
+       */
+      uint64_t origin_difficulty;
+
+      /**
+       * Base user cpu usage
+       *
+       * @brief Base user cpu usage
+       */
+      uint16_t base_user_cpu_usage;
+
+      /**
+       * Base user net usage
+       *
+       * @brief Base user net usage
+       */
+      uint16_t base_user_net_usage;
+
 
       EOSLIB_SERIALIZE( blockchain_parameters,
                         (max_block_net_usage)(target_block_net_usage_pct)
@@ -156,6 +220,7 @@ namespace eosio {
 
                         (max_transaction_lifetime)(deferred_trx_expiration_window)(max_transaction_delay)
                         (max_inline_action_size)(max_inline_action_depth)(max_authority_depth)
+                        (origin_difficulty)(base_user_cpu_usage)(base_user_net_usage)
       )
    };
 
@@ -233,6 +298,147 @@ namespace eosio {
     */
    inline void set_privileged( name account, bool is_priv ) {
       internal_use_do_not_use::set_privileged( account.value, is_priv );
+   }
+
+   /**
+   * calc user's ram attenuation
+   *
+   * @param name - user name.
+   * @return size of the ram attenuation
+   */
+   inline int64_t ram_attenuation(name name) {
+      return internal_use_do_not_use::ram_attenuation(name.value);
+   }
+
+   /**
+   * calc need attenuation account
+   *
+   * @return user name
+   */
+   inline uint64_t get_need_attenuation_account() {
+      return internal_use_do_not_use::get_need_attenuation_account();
+   }
+
+   /**
+    * tell the chain new pow difficulty
+    *
+    * @param difficulty the new difficulty
+    * @return if success,return yes. or return no.
+   */
+   inline bool set_difficulty(double difficulty) {
+      return internal_use_do_not_use::set_difficulty(difficulty);
+   }
+
+   /**
+    * verify wood is valid
+    *
+    * @param block_number - the forest block number.
+    * @param account - the wood owner account.
+    * @param wood - the wood.
+    * @return is this wood valid.
+    */
+   inline bool verify_wood(uint32_t block_number, name account, const char* wood) {
+      return internal_use_do_not_use::verify_wood(block_number, account.value, wood);
+   }
+
+   /**
+    * forest_period_number
+    *
+    * @return forest_period_number
+    */
+   inline uint32_t forest_period_number() {
+      return internal_use_do_not_use::forest_period_number();
+   }
+
+   /**
+    * forest_space_number
+    *
+    * @return forest_space_number
+    */
+   inline uint32_t forest_space_number() {
+      return internal_use_do_not_use::forest_space_number();
+   }
+
+   /**
+    * reg dbp
+    *
+    * @param account - user account
+    * @return is success
+    */
+   inline bool cregdbp(name account) {
+      return internal_use_do_not_use::cregdbp(account.value);
+   }
+
+   /**
+    * unreg dbp
+    *
+    * @param account - user account
+    * @return is success
+    */
+   inline void cunregdbp(name account) {
+      internal_use_do_not_use::cunregdbp(account.value);
+   }
+
+   /**
+    * calc unpaid user resource weight
+    *
+    * @param account - user account
+    * @return unpaid user resource weight
+    */
+   inline int64_t unpaid_resouresweight(name account) {
+      return internal_use_do_not_use::unpaid_resouresweight(account.value);
+   }
+
+   /**
+    * calc all user resource weight
+    *
+    * @return unpaid all user resource weight
+    */
+   inline int64_t total_unpaid_resouresweight() {
+      return internal_use_do_not_use::total_unpaid_resouresweight();
+   }
+
+   /**
+    * sign this user is claimed
+    *
+    * @param account - user account
+    */
+   inline void setclaimed(name account) {
+      internal_use_do_not_use::setclaimed(account.value);
+   }
+
+   /**
+    * judge this transaction is or not system transaction
+    *
+    * @param trx_data -transaction data.
+    * @param trx_size - size of transaction data.
+    * @return is or not system transaction.
+    */
+   inline bool is_systemaccount_transaction( char* trx_data, uint32_t trx_size) {
+      return internal_use_do_not_use::is_systemaccount_transaction(trx_data, trx_size);
+   }
+
+   /**
+    * set whitle/gray/black list
+    *
+    * @param list - list type.
+    * @param action - add/remove/modify.
+    * @param data - data
+    * @param datalen - size of the data.
+    * @return is success.
+    */
+   inline void set_name_list_packed(uint32_t list, uint32_t action, char* data, uint32_t datalen) {
+      internal_use_do_not_use::set_name_list_packed(list, action, data, datalen);
+   }
+
+   /**
+    * get chain head blocknum
+    *
+    * @return chain head blocknum.
+    */
+   __attribute__((eosio_wasm_import))
+   inline uint32_t get_chain_head_num() {
+      return internal_use_do_not_use::get_chain_head_num();
    }
 
 }

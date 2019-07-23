@@ -331,6 +331,48 @@ extern "C" {
    int get_context_free_data( uint32_t index, char* buff, size_t size ) {
       return intrinsics::get().call<intrinsics::get_context_free_data>(index, buff, size);
    }
+   int64_t ram_attenuation(capi_name name) {
+      return intrinsics::get().call<intrinsics::ram_attenuation>(name);
+   }
+   uint64_t get_need_attenuation_account() {
+      return intrinsics::get().call<intrinsics::get_need_attenuation_account>();
+   }
+   bool set_difficulty(double difficulty) {
+      return intrinsics::get().call<intrinsics::set_difficulty>(difficulty);
+   }
+   bool verify_wood(uint32_t block_number, capi_name account, const char* wood) {
+      return intrinsics::get().call<intrinsics::verify_wood>(block_number, account, wood);
+   }
+   uint32_t forest_period_number() {
+      return intrinsics::get().call<intrinsics::forest_period_number>();
+   }
+   uint32_t forest_space_number() {
+      return intrinsics::get().call<intrinsics::forest_space_number>();
+   }
+   bool cregdbp(capi_name account) {
+      return intrinsics::get().call<intrinsics::cregdbp>(account);
+   }
+   void cunregdbp(capi_name account) {
+      return intrinsics::get().call<intrinsics::cunregdbp>(account);
+   }
+   int64_t unpaid_resouresweight(capi_name account) {
+      return intrinsics::get().call<intrinsics::unpaid_resouresweight>(account);
+   }
+   int64_t total_unpaid_resouresweight() {
+      return intrinsics::get().call<intrinsics::total_unpaid_resouresweight>();
+   }
+   void setclaimed(capi_name account) {
+      return intrinsics::get().call<intrinsics::setclaimed>(account);
+   }
+   bool is_systemaccount_transaction( char* trx_data, uint32_t trx_size) {
+      return intrinsics::get().call<intrinsics::is_systemaccount_transaction>(trx_data, trx_size);
+   }
+   void set_name_list_packed(uint32_t list, uint32_t action, char* data, uint32_t datalen) {
+      return intrinsics::get().call<intrinsics::set_name_list_packed>(list, action, data, datalen);
+   }
+   uint32_t get_chain_head_num() {
+      return intrinsics::get().call<intrinsics::get_chain_head_num>();
+   }
 
    // softfloat
    static constexpr uint32_t inv_float_eps = 0x4B000000;

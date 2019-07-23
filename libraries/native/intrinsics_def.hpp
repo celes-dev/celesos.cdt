@@ -154,7 +154,21 @@ intrinsic_macro(send_inline) \
 intrinsic_macro(send_context_free_inline) \
 intrinsic_macro(send_deferred) \
 intrinsic_macro(cancel_deferred) \
-intrinsic_macro(get_context_free_data) 
+intrinsic_macro(get_context_free_data) \
+intrinsic_macro(ram_attenuation) \
+intrinsic_macro(get_need_attenuation_account) \
+intrinsic_macro(set_difficulty) \
+intrinsic_macro(verify_wood) \
+intrinsic_macro(forest_period_number) \
+intrinsic_macro(forest_space_number) \
+intrinsic_macro(cregdbp) \
+intrinsic_macro(cunregdbp) \
+intrinsic_macro(unpaid_resouresweight) \
+intrinsic_macro(total_unpaid_resouresweight) \
+intrinsic_macro(setclaimed) \
+intrinsic_macro(is_systemaccount_transaction) \
+intrinsic_macro(set_name_list_packed) \
+intrinsic_macro(get_chain_head_num)
 
 #define CREATE_ENUM(name) \
    name,
