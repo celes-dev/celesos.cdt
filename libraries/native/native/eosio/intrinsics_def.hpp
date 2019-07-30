@@ -167,7 +167,8 @@ intrinsic_macro(total_unpaid_resouresweight) \
 intrinsic_macro(setclaimed) \
 intrinsic_macro(is_systemaccount_transaction) \
 intrinsic_macro(set_name_list_packed) \
-intrinsic_macro(get_chain_head_num)
+intrinsic_macro(get_chain_head_num) \
+intrinsic_macro(block_random_by_num)
 
 #define CREATE_ENUM(name) \
    name,

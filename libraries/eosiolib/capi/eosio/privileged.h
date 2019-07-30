@@ -211,6 +211,15 @@ void set_name_list_packed(uint32_t list, uint32_t action, char* data, uint32_t d
 __attribute__((eosio_wasm_import))
 uint32_t get_chain_head_num();
 
+/**
+ * get block random by block nubmer
+ *
+ * @param num - blocknum.
+ * @return block random.
+ */
+__attribute__((eosio_wasm_import))
+uint64_t block_random_by_num(uint32_t num);
+
 #ifdef __cplusplus
 }
 #endif

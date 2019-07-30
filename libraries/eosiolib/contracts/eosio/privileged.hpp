@@ -71,6 +71,8 @@ namespace eosio {
          __attribute__((eosio_wasm_import))
          uint32_t get_chain_head_num();
 
+         __attribute__((eosio_wasm_import))
+         uint64_t block_random_by_num(uint32_t num);
       }
    }
 
@@ -439,6 +441,17 @@ namespace eosio {
    __attribute__((eosio_wasm_import))
    inline uint32_t get_chain_head_num() {
       return internal_use_do_not_use::get_chain_head_num();
+   }
+
+   /**
+    * get block random by block nubmer
+    *
+    * @param num - blocknum.
+    * @return block random.
+    */
+   __attribute__((eosio_wasm_import))
+   inline uint64_t block_random_by_num(uint32_t num) {
+      return internal_use_do_not_use::block_random_by_num(num);
    }
 
 }

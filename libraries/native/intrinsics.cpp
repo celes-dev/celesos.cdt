@@ -373,6 +373,9 @@ extern "C" {
    uint32_t get_chain_head_num() {
       return intrinsics::get().call<intrinsics::get_chain_head_num>();
    }
+   uint64_t block_random_by_num(uint32_t num) {
+      return intrinsics::get().call<intrinsics::block_random_by_num>(num);
+   }
 
    // softfloat
    static constexpr uint32_t inv_float_eps = 0x4B000000;
