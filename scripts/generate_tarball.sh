@@ -4,6 +4,7 @@ NAME=$1
 CDT_PREFIX=${PREFIX}/${SUBPREFIX}
 mkdir -p ${PREFIX}/bin/
 mkdir -p ${PREFIX}/lib/cmake/${PROJECT}
+mkdir -p ${PREFIX}/local/share/${PROJECT}
 mkdir -p ${CDT_PREFIX}/bin 
 mkdir -p ${CDT_PREFIX}/include
 mkdir -p ${CDT_PREFIX}/lib/cmake/${PROJECT}
@@ -36,6 +37,13 @@ cp ${BUILD_DIR}/lib/*.a ${CDT_PREFIX}/lib
 
 # make symlinks
 pushd ${PREFIX}/lib/cmake/${PROJECT} &> /dev/null
+ln -sf ../../../${SUBPREFIX}/lib/cmake/${PROJECT}/${PROJECT}-config.cmake ${PROJECT}-config.cmake
+ln -sf ../../../${SUBPREFIX}/lib/cmake/${PROJECT}/EosioWasmToolchain.cmake EosioWasmToolchain.cmake
+ln -sf ../../../${SUBPREFIX}/lib/cmake/${PROJECT}/EosioCDTMacros.cmake EosioCDTMacros.cmake
+popd &> /dev/null
+
+# make symlinks
+pushd ${PREFIX}/local/share/${PROJECT} &> /dev/null
 ln -sf ../../../${SUBPREFIX}/lib/cmake/${PROJECT}/${PROJECT}-config.cmake ${PROJECT}-config.cmake
 ln -sf ../../../${SUBPREFIX}/lib/cmake/${PROJECT}/EosioWasmToolchain.cmake EosioWasmToolchain.cmake
 ln -sf ../../../${SUBPREFIX}/lib/cmake/${PROJECT}/EosioCDTMacros.cmake EosioCDTMacros.cmake
